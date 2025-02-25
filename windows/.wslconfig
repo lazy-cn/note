@@ -1,0 +1,8 @@
+[wsl2]
+#网络镜像模式
+networkingMode=mirrored
+
+[experimental]
+hostAddressLoopback=true
+#检测空闲 CPU 使用率后，自动释放缓存的内存。 设置为 gradual 以慢速释放，设置为 dropcache 以立即释放缓存的内存。
+autoMemoryReclaim=gradual
