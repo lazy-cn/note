@@ -1,6 +1,6 @@
 # docker部署samba
 
-## docker-compose文件
+docker-compose.yaml
 
 ```yaml
 services:
