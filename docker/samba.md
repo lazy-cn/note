@@ -17,9 +17,9 @@ services:
       - "139:139/tcp"  # 映射 TCP 139 端口（NetBIOS Session Service）
       - "445:445/tcp"  # 映射 TCP 445 端口（SMB over TCP）
     command: >  # 使用 command 参数传递 Samba 配置
-      -s "video;/shared/video;yes;no;yes;all;all;all;视频"  # 配置 Samba 共享目录
-      -u "root;root"  # 添加用户 root，密码为 root
-      -w "WORKGROUP"  # 设置工作组为 WORKGROUP
+      -s "video;/shared/video;yes;no;yes;all;all;all;视频"
+      -u "root;root"
+      -w "WORKGROUP"
     restart: unless-stopped  # 设置容器重启策略为 unless-stopped（除非手动停止，否则始终重启）
 ```
 
