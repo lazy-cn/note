@@ -1,0 +1,13 @@
+services:
+  mihomo:
+    image: metacubex/mihomo:latest
+    container_name: mihomo
+    restart: unless-stopped
+    ports:
+      - "7890:7890"  # HTTP/HTTPS 代理端口
+      - "7891:7891"  # SOCKS5 代理端口
+      - "9090:9090"  # 控制面板端口（可选）
+    volumes:
+      - ${PWD}/config:/root/.config/mihomo  # 挂载配置文件目录
+    environment:
+      - TZ=Asia/Shanghai  # 设置时区
